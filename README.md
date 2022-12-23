@@ -28,16 +28,20 @@ This action uploads files to Bucket through 4EVERLAND service
 
 Uploaded file count.
 
+### `bucketLink`
+
+The Bucket link of uploaded files.
+
 ## Example usage
 
 ```
-- name: pin4everland
-  id: pin4everland
-  uses: 4everland/pin-bucket-action@main
+- name: pin-4everland-bucket
+  id: pinBucket
+  uses: 4everland/pin-bucket-action@v1.0
   with:
     EVER_API_KEY: ${{secrets.EVER_API_KEY}}
     EVER_API_SECRET: ${{secrets.EVER_API_SECRET}}
     EVER_BUCKET_NAME: "test-bucket"
-    EVER_BUCKET_FOLDER: "images"
-    LOCAL_PATH: "./dist/public/img"
+    EVER_BUCKET_FOLDER: "test-proj"
+    LOCAL_PATH: "./dist/public"
 ```
