@@ -48632,7 +48632,7 @@ class PinApi {
       count: files.length,
       bucketLink:
         `https://dashboard.4everland.org/bucket/storage/` +
-        path.join(Bucket, Prefix),
+        path.join(Bucket, Prefix, "/"),
     };
   }
 
