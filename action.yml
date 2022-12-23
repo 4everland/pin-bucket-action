@@ -1,0 +1,27 @@
+name: "4EVERLAND pin bucket action"
+description: "Upload files to bucket"
+inputs:
+  LOCAL_PATH:
+    description: "Local path to upload"
+    required: true
+  EVER_API_KEY:
+    description: "4EVERLAND api key"
+    required: true
+  EVER_API_SECRET:
+    description: "4EVERLAND buket api secret"
+    required: true
+  EVER_BUCKET_NAME:
+    description: "4EVERLAND bucket name"
+    required: true
+  EVER_BUCKET_FOLDER:
+    description: "4EVERLAND bucket folder"
+    required: false
+
+outputs:
+  fileCount:
+    description: "Uploaded file count"
+  bucketLink:
+    description: "The Bucket link"
+runs:
+  using: "node16"
+  main: "dist/index.js"
