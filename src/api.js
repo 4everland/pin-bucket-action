@@ -22,7 +22,12 @@ class PinApi {
   }
 
   async uploadFiles(localPath, Bucket, Prefix) {
-    const files = utils.getFiles(localPath);
+    let files = [];
+    const pathArr = localPath.split(",").map((it) => it.trim());
+    for (const fPath of pathArr) {
+      const readFiles = utils.getFiles(fPath);
+      files = files.concat(readFiles);
+    }
     // console.log(files);
     if (!files.length) {
       throw new Error("No files found");

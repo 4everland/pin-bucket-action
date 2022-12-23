@@ -37,11 +37,11 @@ The Bucket link of uploaded files.
 ```
 - name: pin-4everland-bucket
   id: pinBucket
-  uses: 4everland/pin-bucket-action@v1.2
+  uses: 4everland/pin-bucket-action@v1.3
   with:
     EVER_API_KEY: ${{secrets.EVER_API_KEY}}
     EVER_API_SECRET: ${{secrets.EVER_API_SECRET}}
     EVER_BUCKET_NAME: "test-bucket"
     EVER_BUCKET_FOLDER: "test-proj"
-    LOCAL_PATH: "./dist/public"
+    LOCAL_PATH: "./dist,./output"
 ```
