@@ -37,7 +37,7 @@ The Bucket link of uploaded files.
 ```
 - name: pin-4everland-bucket
   id: pinBucket
-  uses: 4everland/pin-bucket-action@v1.1
+  uses: 4everland/pin-bucket-action@v1.2
   with:
     EVER_API_KEY: ${{secrets.EVER_API_KEY}}
     EVER_API_SECRET: ${{secrets.EVER_API_SECRET}}
